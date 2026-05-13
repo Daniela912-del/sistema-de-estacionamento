@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VagaCerta - Estacionamento</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body class="bg-light">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h1 class="fw-bold text-primary">🚗 VagaCerta</h1>
+        <p class="lead">Sistema de Cadastro de Carros e Estacionamento</p>
+      </div>
+
+      <!-- SEÇÃO 1: CADASTRO DE CARROS -->
+      <div class="card shadow mb-4">
+        <div class="card-header bg-primary text-white">
+          <h5>📝 Cadastrar Novo Carro</h5>
+        </div>
+        <div class="card-body">
+          <form id="cadastroForm">
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="nome" class="form-label">Nome do Carro:</label>
+                <input
+                  type="text"
+                  id="nome"
+                  class="form-control"
+                  placeholder="Ex: Corsa"
+                  required
+                />
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="placa" class="form-label">Placa:</label>
+                <input
+                  type="text"
+                  id="placa"
+                  class="form-control"
+                  placeholder="Ex: ABC-1234"
+                  required
+                />
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="proprietario" class="form-label"
+                  >Proprietário:</label
+                >
+                <input
+                  type="text"
+                  id="proprietario"
+                  class="form-control"
+                  placeholder="Ex: João Silva"
+                  required
+                />
+              </div>
+            </div>
+            <button
+              id="btnCadastro"
+              type="submit"
+              class="btn btn-success w-100"
+            >
+              Cadastrar Carro
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- SEÇÃO 2: ENTRADA E SAÍDA -->
+      <div class="row">
+        <!-- ENTRADA -->
+        <div class="col-md-6">
+          <div class="card shadow mb-4">
+            <div class="card-header bg-info text-white">
+              <h5>➡️ Entrada do Carro</h5>
+            </div>
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="carroSelect" class="form-label"
+                  >Selecione o Carro:</label
+                >
+                <select id="carroSelect" class="form-select" required>
+                  <option value="">-- Selecione um carro --</option>
+                </select>
+              </div>
+              <button id="btnEntrada" class="btn btn-info w-100">
+                Registrar Entrada
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAÍDA -->
+        <div class="col-md-6">
+          <div class="card shadow mb-4">
+            <div class="card-header bg-warning text-dark">
+              <h5>⬅️ Saída do Carro</h5>
+            </div>
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="carroSaidaSelect" class="form-label"
+                  >Selecione o Carro:</label
+                >
+                <select id="carroSaidaSelect" class="form-select" required>
+                  <option value="">-- Selecione um carro --</option>
+                </select>
+              </div>
+              <button id="btnSaida" class="btn btn-warning w-100">
+                Registrar Saída
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEÇÃO 3: VISUALIZAÇÃO DO ESTACIONAMENTO -->
+      <div class="card shadow mb-4">
+        <div class="card-header bg-dark text-white">
+          <h5>🅿️ Visualização do Estacionamento</h5>
+        </div>
+        <div class="card-body">
+          <div class="estacionamento-container">
+            <div id="estacionamento"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEÇÃO 4: CARROS CADASTRADOS -->
+      <div class="card shadow mb-4">
+        <div class="card-header bg-success text-white">
+          <h5>📋 Carros Cadastrados</h5>
+        </div>
+        <div class="card-body">
+          <ul id="listaCarros" class="list-group"></ul>
+        </div>
+      </div>
+
+      <footer class="text-center mt-4">
+        <p class="text-muted">Feito por Daniela 💙 - VagaCerta 2026</p>
+      </footer>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

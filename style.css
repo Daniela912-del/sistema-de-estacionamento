@@ -1,0 +1,247 @@
+/* ===== ESTILOS GLOBAIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1200px;
+}
+
+/* ===== VAGAS DE ESTACIONAMENTO ===== */
+.vaga {
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  padding: 20px 15px;
+  text-align: center;
+  margin: 10px;
+  width: 120px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.vaga:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vaga-livre {
+  background-color: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+
+.vaga-livre:hover {
+  background-color: #c3e6cb;
+}
+
+.vaga-ocupada {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.vaga-ocupada:hover {
+  background-color: #f5c6cb;
+}
+
+/* ===== CONTAINER DO ESTACIONAMENTO ===== */
+.estacionamento-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ===== CARDS ===== */
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card-header h5 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+/* ===== FORMS ===== */
+.form-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.form-control,
+.form-select {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* ===== LISTA ===== */
+.list-group-item {
+  border: 1px solid #e9ecef;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.list-group-item strong {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.badge {
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 30px 0;
+  border-top: 1px solid #e9ecef;
+  margin-top: 40px;
+  text-align: center;
+  color: #6c757d;
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+h1.fw-bold {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #007bff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  h1.fw-bold {
+    font-size: 1.8rem;
+  }
+
+  .vaga {
+    width: 100px;
+    padding: 15px 10px;
+    margin: 8px;
+  }
+
+  .estacionamento-container {
+    padding: 20px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
